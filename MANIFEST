@@ -1,0 +1,6 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/Tiny-Bayes.t
+lib/Tiny/Bayes.pm
