@@ -4,6 +4,11 @@ use 5.010;
 use strict;
 use warnings;
 
+our @ISA = qw(Exporter);
+our %EXPORT_TAGS = ('all' => [ qw() ]);
+our @EXPORT_OK = ();
+our @EXPORT = ();
+
 our $VERSION = '0.01';
 
 use JSON;
