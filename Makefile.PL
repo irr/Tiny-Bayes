@@ -6,7 +6,7 @@ WriteMakefile(
     NAME              => 'Tiny::Bayes',
     VERSION_FROM      => 'lib/Tiny/Bayes.pm', # finds $VERSION
     PREREQ_PM         => {}, # e.g., Module::Name => 1.1
-    ($] >= 5.010001 ?     ## Add these new keywords supported since 5.005
+    ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM  => 'lib/Tiny/Bayes.pm', # retrieve abstract from module
        AUTHOR         => 'Ivan Ribeiro Rocha <ivan.ribeiro@gmail.com>') : ()),
 );
