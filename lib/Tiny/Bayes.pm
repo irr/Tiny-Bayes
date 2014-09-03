@@ -1,6 +1,6 @@
 package Tiny::Bayes;
 
-use 5.014;
+use 5.010;
 use strict;
 use warnings;
 
@@ -111,7 +111,7 @@ Tiny::Bayes - Perl extension for naive bayesian classification
 
 =head1 SYNOPSIS
 
-    use 5.014;
+    use 5.010;
 
     use strict;
     use warnings;
@@ -127,8 +127,8 @@ Tiny::Bayes - Perl extension for naive bayesian classification
 
     sub test {
         my ($obj, $words) = @_;
-        say "\nTesting $obj ( @{$words} )...";
-        say Dump($b->query($words));
+        print "\nTesting $obj ( @{$words} )...\n";
+        print Dump($b->query($words));
     }
 
     $b = Tiny::Bayes->new(classes => ["Doyle", "Dowson", "Beowulf"]);
