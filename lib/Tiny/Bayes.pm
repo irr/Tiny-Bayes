@@ -4,14 +4,6 @@ use 5.010;
 use strict;
 use warnings;
 
-require Exporter;
-
-our @ISA = qw(Exporter);
-
-our %EXPORT_TAGS = ( 'all' => [ qw() ] );
-our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
-our @EXPORT = qw();
-
 our $VERSION = '0.01';
 
 use JSON;
@@ -42,7 +34,9 @@ sub learn {
     foreach (@{$words}) {
         $data->{freqs}->{$_} += 1;
         $data->{total}++;
-    }    
+    } 
+
+    return $self;  
 }
 
 sub query {
@@ -87,6 +81,7 @@ sub freeze {
     open(my $out, '>:raw', $file) or die "Unable to open: $!";
     print $out $data;
     close($out);
+    return $self;
 }
 
 sub unfreeze {
@@ -100,6 +95,7 @@ sub unfreeze {
     my $data = $json->decode($bin);
     $self->{classes} = @{$data}[0];
     $self->{sets} = @{$data}[1];
+    return $self;
 }
 
 1;
