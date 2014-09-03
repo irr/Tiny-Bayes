@@ -31,7 +31,7 @@ test($b, ["adventures", "sherlock", "holmes"]);
 test($b, ["comedy", "masks"]);
 test($b, ["hrothgar", "beowulf"]);
 
-$b = Tiny::Bayes->new_from_file(file => "f.bin");
+$b = Tiny::Bayes->new_from_file(file => "data.json");
 
 test($b, ["adventures", "sherlock", "holmes"]);
 test($b, ["comedy", "masks"]);
