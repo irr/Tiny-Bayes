@@ -25,7 +25,7 @@ foreach ("Doyle", "Dowson", "Beowulf") {
     $b->learn($_, \@w);    
 }
 
-$b->freeze("f.bin");
+$b->freeze("data.json");
 
 test($b, ["adventures", "sherlock", "holmes"]);
 test($b, ["comedy", "masks"]);
@@ -37,4 +37,4 @@ test($b, ["adventures", "sherlock", "holmes"]);
 test($b, ["comedy", "masks"]);
 test($b, ["hrothgar", "beowulf"]);
 
-unlink("f.bin");
+unlink("data.json");
