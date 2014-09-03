@@ -113,7 +113,7 @@ Tiny::Bayes - Perl extension for naive bayesian classification
 
 =head1 SYNOPSIS
 
-    use 5.010;
+    use 5.010001;
 
     use strict;
     use warnings;
